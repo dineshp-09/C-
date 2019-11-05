@@ -21,7 +21,7 @@ class LinkedList {
         void addFirst(int);
         void addLast(int);
         void insertPosition(int, int);
-        // void deletePosition(int, int);
+        void deletePosition(int);
         void display();
 };
 
@@ -65,6 +65,20 @@ void LinkedList::insertPosition(int pos, int val) {
     newNode->next = temp;
 }
 
+void LinkedList::deletePosition(int pos) {
+    Node * temp = head;
+    Node * prev = NULL;
+    int p = 1;
+    while(temp->next != NULL && p < pos) {
+        prev = temp;
+        temp = temp->next;
+        p++;
+    }
+    prev->next = temp->next;
+    delete temp;
+    temp = NULL;
+}
+
 void LinkedList::display() {
     for(Node *temp = head; temp != NULL; temp = temp->next)
         cout<<temp->data<<"->";
@@ -81,7 +95,10 @@ int main() {
     cout<<"\nAdd Last:"<<endl;
     lst.display();
     lst.insertPosition(4, 35);
-    cout<<"\nInsert Position:"<<endl;
+    cout<<"\nInsert at Position 4:"<<endl;
+    lst.display();
+    lst.deletePosition(4);
+    cout<<"\nDelete at Position 4:"<<endl;
     lst.display();
     return 0;
 }
@@ -91,6 +108,8 @@ Add First:
 10->20->30->
 Add Last:
 10->20->30->40->
-Insert Position:
+Insert at Position 4:
 10->20->30->35->40->
+Delete at Position 4:
+10->20->30->40->
 */
