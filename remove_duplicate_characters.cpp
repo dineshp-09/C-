@@ -1,5 +1,5 @@
 /* 
-Function to removes duplicate characters from a string
+Function to removes Duplicate characters from a string
 */
 
 # include <iostream>
