@@ -1,5 +1,5 @@
 /*
-Program to find fibonacci series till given number
+Program to find Fibonacci series till given number
 */
 
 #include<iostream>
