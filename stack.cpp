@@ -1,5 +1,5 @@
 /*
-Stack Implementation
+Stack Implementation Program
 */
 
 #include <iostream>
