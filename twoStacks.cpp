@@ -1,3 +1,7 @@
+/*
+Implementation of two stacks working as a pipe
+*/
+
 #include <iostream>
 using namespace std;
 
